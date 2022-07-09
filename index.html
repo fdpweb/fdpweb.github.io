@@ -518,13 +518,13 @@
         function err(){
             alert("Encountered an error, please try again or contact the developer!")
         }
-        var latestVersion="Watting...";
-        var FDPDisOnline="Watting...";
-        var relaseVer="Watting...";
-        var disinv="Watting...";
-        var changelog="Watting...";
-        var lastworkerid="Watting...";
-        var latestRelease="Watting...";
+        var latestVersion="Waiting...";
+        var FDPDisOnline="Waiting...";
+        var relaseVer="Waiting...";
+        var disinv="Waiting...";
+        var changelog="Waiting...";
+        var lastworkerid="Waiting...";
+        var latestRelease="Waiting...";
         var loadedTick=0;
         function checkUpdate() {
             $.get("https://api.github.com/repos/SkidderMC/FDPClient/releases/latest", function(data) {
@@ -605,8 +605,8 @@
         function popDiscordInfo() {
             console.log("POP")
             swal({
-                title: "Select version to download",
-                text: latestVersion.replace("<br>"," | "),
+                title: "Discord Function",
+                text: ("Select mode"),
                 icon: "info",
                 buttons: true,
                 buttons: ["Invite", "Web"]
