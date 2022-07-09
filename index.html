@@ -3,7 +3,13 @@
 <head>
     <title>FDPClient | Website</title>
     <meta charset="UTF-8">
-    <link href="/full.css" rel="stylesheet" type="text/css" />
+    <meta content="FDPClient" property="og:title" />
+    <meta content="1.8 Utility mod" property="og:description" />
+    <meta content="https://github.com/SkidderMC/FDPClient" property="og:url" />
+    <meta content="img/icon.png" property="og:image" />
+    <meta content="#FFF000" data-react-helmet="true" name="theme-color" />
+	<link href="/full.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/x-icon" href="img/icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./lib/mdui/mdui.min.css" />
     <script src="./lib/mdui/mdui.min.js"></script>
@@ -20,14 +26,14 @@
         <div class="mdui-valign title page" style="opacity: 1;height: 100%;margin-top:10px">
             <div class="mdui-center">
                 <h1 style="font-size: 45px;color:rgba(255,255,255,0.8);font-weight: 400;text-shadow: 0 0 8px rgba(0,0,0,0.07);">
-                    FDPClient.Club
+                    FDPClient
                 </h1>
             </div>
         </div>
         <div class="mdui-valign loading page" style="opacity: 0;height: 100%;">
             <div class="mdui-center">
                 <h1 style="font-size: 45px;color:rgba(255,255,255,0.8);font-weight: 400;text-shadow: 0 0 8px rgba(0,0,0,0.07);">
-                    FDPClient.Club
+					FDPClient
                 </h1>
                 <div class="mdui-progress" style="opacity: 1;box-shadow: 0 0 5px rgba(0,0,0,0.08);width: 130%;margin-left: -15%;background:rgba(50,50,50,0.08);height: 13px;border-radius: 4px;">
                     <div style="background:rgba(255,255,255,0.5);" class="mdui-progress-indeterminate"></div>
@@ -58,26 +64,26 @@
             </div>-->
     
             <div class="username">
-                %version% , Made by UnlegitMC & Web designed by XiGua
+                %version% , Made by SkidderMC
             </div>
             <div class="mdui-center">
                 <h1 style="opacity: 1;text-align: center;font-size: 45px;color:rgba(255,255,255,0.8);font-weight: 400;text-shadow: 0 0 8px rgba(0,0,0,0.07);">
-                    FDPClient.Club
+                    FDPClient
                 </h1>
                 <h4 style="opacity: 1;text-align: center;font-size: 18px;color:rgba(255,255,255,0.8);font-weight: 400;text-shadow: 0 0 8px rgba(0,0,0,0.07);">
-                    For Chinese QQ Group: 912687006
+                    1.8 Utility mod
                 </h4>
                 <!--<div id="download" mdui-tooltip="{content: '<versions></versions>', position: 'right'}" class="button" onclick="goAction(0)">
                     <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">file_download</i> <span style="margin-right: 25px;" id="single-button">Download Latest</span>
                 </div>-->
-                <div id="downloadBeta" mdui-tooltip="{content: 'FDPClient Github', position: 'right'}" class="button" onclick="goAction(5)">
-                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">file_download</i> <span style="margin-right: 25px;" id="single-button">Download Release</span>
+                <div id="downloadBeta" mdui-tooltip="{content: 'FDPClient', position: 'right'}" class="button" onclick="popUpdateInfo()">
+                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">file_download</i> <span style="margin-right: 25px;" id="single-button">Download</span>
                 </div>
-                <div id="code" mdui-tooltip="{content: '<size></size>', position: 'right'}" class="button" onclick="window.open('https://github.com/UnlegitMC/FDPClient')">
-                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">code</i> <span style="margin-right: 25px;" id="multi-button">Visit in Github</span>
+                <div id="code" mdui-tooltip="{content: '<size></size>', position: 'right'}" class="button" onclick="window.open('https://github.com/SkidderMC/FDPClient')">
+                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">code</i> <span style="margin-right: 25px;" id="multi-button">Github</span>
                 </div>
-                <div id="discord" class="button" mdui-tooltip="{content: '<online></online>', position: 'right'}" onclick="goAction(2)">
-                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">textsms</i> <span style="margin-right: 25px;" id="alt-button">Talk in Discord</span>
+                <div id="discordmenu" class="button" mdui-tooltip="{content: '<online></online>', position: 'right'}" onclick="goAction(5)">
+                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">textsms</i> <span style="margin-right: 25px;" id="alt-button">Discord Server</span>
                 </div>
             </div>
         </div>
@@ -90,7 +96,7 @@
     </div>
     <headers>
         <div class="navbar bg-base-100">
-          <a class="btn btn-ghost normal-case text-xl">FDPClient Website</a>
+          <a class="btn btn-ghost normal-case text-xl">FDPClient</a>
         </div>
     </headers>
     <div class="hero min-h-screen bg-base-200">
@@ -99,13 +105,13 @@
     <div class="hero min-h-screen bg-base-200">
         <div id="BackgroundVideo">
             <div class="video-wrapper">
-                <iframe id="video-iframe" title="Showcase video" frameborder="0" src="https://www.youtube-nocookie.com/embed/wGgWw0JxTnE?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1"></iframe>
+                <iframe id="video-iframe" title="Showcase video" frameborder="0" src="https://www.youtube-nocookie.com/embed/OfRsHyhXnYc?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1"></iframe>
             </div>
         </div>
       <div class="hero-content text-center">
         <div class="max-w-md">
           <h1 class="text-5xl font-bold" style="color:rgba(255,255,255,0.9);text-shadow:0 0 10px rgba(0,0,0,0.15);">FDPClient</h1>
-          <p class="py-6" style="color:rgba(255,255,255,0.9);text-shadow:0 0 5px rgba(0,0,0,0.15);">A Minecraft 1.8 utility mod</p>
+          <p class="py-6" style="color:rgba(255,255,255,0.9);text-shadow:0 0 5px rgba(0,0,0,0.15);"></p>
           <a class="btn btn-primary" href="#header">Get Started</a>
         </div>
       </div>
@@ -180,13 +186,13 @@
 								<p>
 									Due to LiquidBounce's excellent high degree of customization, FDPClient can bypass:<br>
 									BlocksMC<br>
-									Hypixel<br>
-									hyCraft<br>
 									RedeSky<br>
-									AAC5 and earlier<br>
+									AdvancedAntiCheat<br>
 									Verus<br>
-									NCP and other branches<br>
-									Matrix
+									NCP<br>
+									Matrix<br>
+									Vulcan<br>
+									WatchDog
 								</p>							
 							</div>							
 						</div>
@@ -484,7 +490,7 @@
             $(".title").css("margin-top", "-15px");
             setTimeout(function() {
                 $(".mainmenu").css("display", "block");
-                $("size").html("<img src='https://img.shields.io/github/languages/code-size/UnlegitMC/FDPClient'>");
+                $("size").html("<img src='https://img.shields.io/github/languages/code-size/SkidderMC/FDPClient'>");
             }, 400);
             setTimeout(function() {
                 $(".mainmenu").css("opacity", "1");
@@ -521,13 +527,13 @@
         var latestRelease="Watting...";
         var loadedTick=0;
         function checkUpdate() {
-            $.get("https://api.github.com/repos/UnlegitMC/FDPClient/releases/latest", function(data) {
+            $.get("https://api.github.com/repos/SkidderMC/FDPClient/releases/latest", function(data) {
                 latestRelease=data.html_url;
                 relaseVer = data.name;
             }).error(function(){
                 err();
             });
-            $.get("https://api.github.com/repos/UnlegitMC/FDPClient/actions/runs", function(data2) {
+            $.get("https://api.github.com/repos/SkidderMC/FDPClient/actions/runs", function(data2) {
                     var pre = findBuilded(data2)[0];
                     lastworkerid=findBuilded(data2)[1];
                     $("#titleVer").html("git-"+pre.substring(0,6));
@@ -542,7 +548,7 @@
             }).error(function(){
                 err();
             });
-            $.get("https://img.shields.io/github/languages/code-size/UnlegitMC/FDPClient", function(data) {
+            $.get("https://img.shields.io/github/languages/code-size/SkidderMC/FDPClient", function(data) {
                 loadedTick++;
             }).error(function(){
                 err();
@@ -580,18 +586,35 @@
                 text: latestVersion.replace("<br>"," | "),
                 icon: "info",
                 buttons: true,
-                buttons: ["Preview", "Releases"]
+                buttons: ["Latest Action", "Release"]
             }).then((value) => {
                 if (value==1) {
                     window.open(latestRelease);
                 }else{
                     if(lastworkerid!="Watting..."){
-                        window.open("https://nightly.link/UnlegitMC/FDPClient/actions/runs/"+lastworkerid+"/FDPClient.zip")
+                        window.open("download.html")
                         //alert("You need login Github to download!\n你需要登录Github才能下载!");
-                        //window.open("https://github.com/UnlegitMC/FDPClient/actions/runs/"+lastworkerid)
+                        //window.open("https://github.com/SkidderMC/FDPClient/actions/runs/"+lastworkerid)
                     }else{
                         alert("Error to download this version!");
                     }
+                }
+            });
+        }
+
+        function popDiscordInfo() {
+            console.log("POP")
+            swal({
+                title: "Select version to download",
+                text: latestVersion.replace("<br>"," | "),
+                icon: "info",
+                buttons: true,
+                buttons: ["Invite", "Web"]
+            }).then((value) => {
+                if (value==1) {
+                    window.open("discord.html");
+                }else {
+                    window.open("https://discord.gg/NxTf3tCHQN")
                 }
             });
         }
@@ -625,7 +648,7 @@
                 popUpdateInfo();
             }
             if(i==5){
-                window.open("https://github.com/UnlegitMC/FDPClient/releases");
+				popDiscordInfo()
             }
             /*    $(".mainmenu").css("opacity", "0");
                 $(".mainmenu").css("margin-top", "-50px");
@@ -674,8 +697,8 @@
             }
             $("versions").html(latestVersion);
             $("online").html("Discord Online: "+FDPDisOnline);
-            if($("size").html()!='<img src="https://img.shields.io/github/languages/code-size/UnlegitMC/FDPClient">'){
-                $("size").html("<img src='https://img.shields.io/github/languages/code-size/UnlegitMC/FDPClient'>");
+            if($("size").html()!='<img src="https://img.shields.io/github/languages/code-size/SkidderMC/FDPClient">'){
+                $("size").html("<img src='https://img.shields.io/github/languages/code-size/SkidderMC/FDPClient'>");
             }
             setTimeout("loop();", 100);
         }
